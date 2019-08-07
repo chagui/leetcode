@@ -15,3 +15,19 @@ public:
         return {std::distance(nums.begin(), left_pos), std::distance(nums.begin(), right_pos.base()) - 1};
     }
 };
+
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        std::unordered_map<int, int> seen_to_index;
+        for (int idx = 0; idx < nums.size(); ++idx) {
+            const int complementary = target - nums[idx];
+            if (seen_to_index.find(complementary) != seen_to_index.end()) {
+                return {seen_to_index[complementary], idx};
+            }
+            seen_to_index[nums[idx]] = idx;
+        }
+        return {};
+    }
+};
