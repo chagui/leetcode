@@ -3,43 +3,31 @@
  * struct ListNode {
  *     int val;
  *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        unsigned long n, n1, n2, factor;
-        n1 = 0;
-        n2 = 0;
-        factor = 1;
-        while (l1 != NULL)
-        {
-            n1 += l1->val * factor;
-
-            factor *= 10;
-            l1 = l1->next;
+        ListNode sentinel;
+        ListNode* digit = &sentinel;
+        int carry = 0;
+        while (l1 != nullptr || l2 != nullptr || carry) {
+            int sum = carry;
+            if (l1 != nullptr) {
+                sum += l1->val;
+                l1 = l1->next;
+            }
+            if (l2 != nullptr) {
+                sum += l2->val;
+                l2 = l2->next;
+            }
+            digit = digit->next = new ListNode(sum % 10);
+            carry = sum / 10;
         }
-        factor = 1;
-        while (l2 != NULL)
-        {
-            n2 += l2->val * factor;
-
-            factor *= 10;
-            l2 = l2->next;
-        }
-        n = n1 + n2;
-        ListNode *root = new ListNode(n % 10);
-        n /= 10;
-
-        ListNode *node = root;
-        while (n != 0)
-        {
-            node->next = new ListNode(n % 10);
-            n /= 10;
-            node = node->next;
-        }
-
-        return root;
+        return sentinel.next;
     }
 };
