@@ -15,7 +15,7 @@ public:
         ListNode *left_partition = &new_head;
         ListNode middle; // sentinel
         ListNode *right_partition = &middle;
-        
+
         for (;head != nullptr; head = head->next) {
             if (head->val < x) {
                 left_partition->next = new ListNode(head->val, &middle);

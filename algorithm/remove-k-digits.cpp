@@ -20,7 +20,7 @@ public:
         string s = num.substr(1);
         string with_front = removeKdigitsRec(s, k);
         string without_front = removeKdigitsRec(s, k - 1);
-        // check if we removed more than one digit 
+        // check if we removed more than one digit
         size_t length_diff = (with_front.length() + 1) - without_front.length();
         if (length_diff == 0) return (without_front.front() < num.front()) ? without_front : num.front() + with_front;
         return (with_front.length() > without_front.length()) ? with_front : without_front;

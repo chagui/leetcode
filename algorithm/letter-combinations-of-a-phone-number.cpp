@@ -17,7 +17,7 @@ public:
             return accu * lookup.at(d).length();
         };
         auto nb_of_permutations = accumulate(digits.begin(), digits.end(), 1, count_permutations);
-        
+
         vector<string> permutations;
         permutations.reserve(nb_of_permutations);
         add_permutations("", 0, digits, permutations);

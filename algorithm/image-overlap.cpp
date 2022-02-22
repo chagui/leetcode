@@ -13,7 +13,7 @@ public:
         const size_t size = img1.size();
 
         vector<int> permutations_overlap(4);
-        const auto count_permutations_overlap = 
+        const auto count_permutations_overlap =
             [&permutations_overlap](vector<vector<int>>& img1,
                vector<vector<int>>& img2,
                int horizontal_offset,
@@ -61,7 +61,7 @@ public:
         }
 
         vector<int> permutations_overlap(4);
-        const auto count_permutations_overlap = 
+        const auto count_permutations_overlap =
             [size,&permutations_overlap,&image1,&image2](int horizontal_offset,
                                                          int vertical_offset)
         {

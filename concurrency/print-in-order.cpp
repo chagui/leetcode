@@ -1,7 +1,7 @@
 class Foo {
 public:
     Foo() : m{}, cv1{}, cv2{}, firstPrinted{false}, secondPrinted{false} {
-        
+
     }
 
     void first(function<void()> printFirst) {
