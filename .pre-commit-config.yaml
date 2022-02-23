@@ -17,3 +17,19 @@ repos:
       - id: check-useless-excludes
         name: check for useless excludes
 
+  - repo: local
+    hooks:
+      - id: shellcheck
+        name: shellcheck
+        description: Shell source code linter (https://www.shellcheck.net/)
+        entry: shellcheck
+        language: system
+        types: [shell]
+        stages: [commit]
+      - id: shfmt
+        name: shfmt
+        description: Shell source code formatter (https://github.com/mvdan/sh)
+        entry: shfmt
+        language: system
+        types: [shell]
+        stages: [commit]

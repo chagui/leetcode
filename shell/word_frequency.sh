@@ -1,1 +1,7 @@
-for w in `cat words.txt | tr ' ' '\n' | sort -u`; do echo "$w $(grep -w $w <(cat words.txt | tr ' ' '\n') | wc -l)"; done | sort -rnk2
+#!/usr/bin/env bash
+
+for w in $(tr ' ' '\n' < words.txt | sort -u)
+do
+    echo "$w $(grep -cw "$w" <(tr ' ' '\n' < words.txt))"
+done | sort -rnk2
+
