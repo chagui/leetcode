@@ -1,6 +1,9 @@
+#include <algorithm>
+# include <string>
+
 class Solution {
 public:
-    string addBinary(string a, string b) {
+    std::string addBinary(std::string a, std::string b) {
         if (a.empty()) return b;
         if (b.empty()) return a;
 
