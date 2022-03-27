@@ -1,4 +1,5 @@
 #include <unordered_map>
+#include <vector>
 
 // default on leetcode
 using namespace std;

@@ -5,3 +5,7 @@ cc_binary(
     srcs = ["add-binary.cpp"],
 )
 
+cc_binary(
+    name = "two-sum",
+    srcs = ["two-sum.cpp"],
+)
