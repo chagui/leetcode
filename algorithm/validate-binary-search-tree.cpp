@@ -1,14 +1,16 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+#include <numeric>
+
+using namespace std; // default on leetcode
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 class Solution {
 public:
     bool isValidBoundBST(TreeNode* node, long min, long max) {
@@ -20,7 +22,7 @@ public:
 
     bool isValidBST(TreeNode* root) {
         if (!root) return true;
-        return isValidBoundBST(root->left, std::numeric_limits<long>::min(), root->val)
-            && isValidBoundBST(root->right, root->val, std::numeric_limits<long>::max());
+        return isValidBoundBST(root->left, numeric_limits<long>::min(), root->val)
+            && isValidBoundBST(root->right, root->val, numeric_limits<long>::max());
     }
 };

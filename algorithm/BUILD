@@ -95,3 +95,8 @@ cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
+
+cc_binary(
+    name = "validate-binary-search-tree",
+    srcs = ["validate-binary-search-tree.cpp"],
+)
