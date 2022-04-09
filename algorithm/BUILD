@@ -72,6 +72,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "reverse-integer",
+    srcs = ["reverse-integer.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )

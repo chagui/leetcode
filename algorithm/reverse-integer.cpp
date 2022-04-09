@@ -1,3 +1,6 @@
+#include <numeric>
+
+using namespace std; // default on leetcode
 class Solution {
 public:
     int reverse(int x) {
