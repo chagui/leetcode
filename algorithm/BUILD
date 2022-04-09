@@ -82,6 +82,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "search-insert-position",
+    srcs = ["search-insert-position.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
