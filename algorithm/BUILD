@@ -62,6 +62,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "rectangle-area",
+    srcs = ["rectangle-area.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
