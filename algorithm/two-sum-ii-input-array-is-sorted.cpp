@@ -1,3 +1,7 @@
+#include <vector>
+
+using namespace std; // default on leetcode
+
 class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {

@@ -87,6 +87,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "two-sum-ii-input-array-is-sorted",
+    srcs = ["two-sum-ii-input-array-is-sorted.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
