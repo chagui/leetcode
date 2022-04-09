@@ -52,6 +52,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "partition-list",
+    srcs = ["partition-list.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
