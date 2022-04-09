@@ -32,6 +32,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "longest-substring-without-repeating-characters",
+    srcs = ["longest-substring-without-repeating-characters.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
