@@ -37,6 +37,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "median-of-two-sorted-arrays",
+    srcs = ["median-of-two-sorted-arrays.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
