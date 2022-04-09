@@ -77,6 +77,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "roman-to-integer",
+    srcs = ["roman-to-integer.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )

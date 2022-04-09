@@ -1,3 +1,8 @@
+#include <string> // default on leetcode
+#include <unordered_map>
+
+using namespace std; // default on leetcode
+
 namespace {
     unordered_map<char, int> symbolToValue
     {
