@@ -1,3 +1,8 @@
+#include <string> // default on leetcode
+
+using namespace std; // default on leetcode
+
+
 namespace {
     bool isZero(char c) {
         return c == '0';

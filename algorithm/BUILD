@@ -67,6 +67,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "remove-k-digits",
+    srcs = ["remove-k-digits.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
