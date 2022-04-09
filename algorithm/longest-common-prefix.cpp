@@ -1,3 +1,8 @@
+#include <string> // default on leetcode
+#include <vector>
+
+using namespace std; // default on leetcode
+
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {

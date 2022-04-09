@@ -27,6 +27,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "longest-common-prefix",
+    srcs = ["longest-common-prefix.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
