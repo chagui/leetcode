@@ -22,6 +22,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "letter-combinations-of-a-phone-number",
+    srcs = ["letter-combinations-of-a-phone-number.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )

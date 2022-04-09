@@ -1,3 +1,10 @@
+#include <numeric>
+#include <string> // default on leetcode
+#include <unordered_map>
+#include <vector>
+
+using namespace std; // default on leetcode
+
 class Solution {
     const unordered_map<char, const string> lookup {
         {'2', "abc"},
