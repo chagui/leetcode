@@ -1,3 +1,10 @@
+#include <bitset>
+#include <string> // default on leetcode
+#include <vector>
+
+using namespace std; // default on leetcode
+
+
 namespace {
     constexpr const size_t MAX_ROW_SIZE = 30;
 }

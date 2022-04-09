@@ -17,6 +17,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "image-overlap",
+    srcs = ["image-overlap.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
