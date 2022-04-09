@@ -47,6 +47,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "minimum-depth-of-binary-tree",
+    srcs = ["minimum-depth-of-binary-tree.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
