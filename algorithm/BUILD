@@ -57,6 +57,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "range-sum-of-bst",
+    srcs = ["range-sum-of-bst.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )
