@@ -12,6 +12,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "construct-k-palindrome-strings",
+    srcs = ["construct-k-palindrome-strings.cpp"],
+)
+
+cc_binary(
     name = "two-sum",
     srcs = ["two-sum.cpp"],
 )

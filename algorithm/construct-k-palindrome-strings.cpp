@@ -1,7 +1,16 @@
+#include <algorithm>
+#include <bitset>
+#include <string> // default on leetcode
+#include <unordered_map>
+
+using namespace std; // default on leetcode
+
+
+
 class Solution {
 public:
     bool canConstruct(string s, int k) {
-        optimizedForEnglish(s, k);
+        return optimizedForEnglish(s, k);
     }
 
     // optimize solution in both space and time by assuming input will only be lower case english letters
