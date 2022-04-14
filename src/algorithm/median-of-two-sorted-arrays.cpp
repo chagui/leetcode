@@ -1,32 +1,36 @@
 #include <vector>
 
-using namespace std;  // default on leetcode
+using namespace std; // default on leetcode
 
 class Solution {
- public:
-  double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+public:
+  double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2) {
     auto it1 = nums1.begin(), it2 = nums2.begin();
     size_t number_of_elements = nums1.size() + nums2.size(), pos = 0;
     if (number_of_elements % 2 == 1) {
       size_t median_pos = number_of_elements / 2;
       while (it1 != nums1.end() && it2 != nums2.end()) {
         if (*it1 < *it2) {
-          if (pos == median_pos) return *it1;
+          if (pos == median_pos)
+            return *it1;
           ++pos;
           ++it1;
         } else {
-          if (pos == median_pos) return *it2;
+          if (pos == median_pos)
+            return *it2;
           ++pos;
           ++it2;
         }
       }
       while (it1 != nums1.end()) {
-        if (pos == median_pos) return *it1;
+        if (pos == median_pos)
+          return *it1;
         ++pos;
         ++it1;
       }
       while (pos != median_pos) {
-        if (pos == median_pos) return *it2;
+        if (pos == median_pos)
+          return *it2;
         ++pos;
         ++it2;
       }

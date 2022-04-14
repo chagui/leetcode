@@ -22,6 +22,12 @@ repos:
     hooks:
       - id: clang-format
         args: ["--style=Google", "--sort-includes"]
+      - id: clang-tidy
+      - id: oclint
+      - id: uncrustify
+      - id: cppcheck
+      - id: cpplint
+      - id: include-what-you-use
 
   - repo: local
     hooks:

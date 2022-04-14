@@ -5,14 +5,14 @@
 using namespace std;
 
 class Solution {
- public:
-  vector<int> twoSum(vector<int>& nums, int target) {
+public:
+  vector<int> twoSum(vector<int> &nums, int target) {
     // return twoSumBruteForce(nums, target);
     // return twoSumHashMapTwoPasses(nums, target);
     return twoSumHashMapOnePass(nums, target);
   }
 
-  vector<int> twoSumBruteForce(vector<int>& nums, int target) {
+  vector<int> twoSumBruteForce(vector<int> &nums, int target) {
     for (int valueIndex = 0; valueIndex < nums.size() - 1; ++valueIndex) {
       const int complement = target - nums[valueIndex];
       for (int complementIndex = valueIndex + 1; complementIndex < nums.size();
@@ -25,7 +25,7 @@ class Solution {
     throw runtime_error("No solution");
   }
 
-  vector<int> twoSumHashMapTwoPasses(vector<int>& nums, int target) {
+  vector<int> twoSumHashMapTwoPasses(vector<int> &nums, int target) {
     // build value to indexes (the input may contains multiple times the same
     // value) look-up
     unordered_map<int, int> valueToIndex{{nums[0], 0}};
@@ -43,7 +43,7 @@ class Solution {
     throw runtime_error("No solution");
   }
 
-  vector<int> twoSumHashMapOnePass(vector<int>& nums, int target) {
+  vector<int> twoSumHashMapOnePass(vector<int> &nums, int target) {
     unordered_map<int, int> valueToIndex{{nums[0], 0}};
 
     for (int index = 1; index < nums.size(); ++index) {

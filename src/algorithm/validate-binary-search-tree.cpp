@@ -1,6 +1,6 @@
 #include <numeric>
 
-using namespace std;  // default on leetcode
+using namespace std; // default on leetcode
 
 struct TreeNode {
   int val;
@@ -13,16 +13,19 @@ struct TreeNode {
 };
 
 class Solution {
- public:
+public:
   bool isValidBoundBST(TreeNode *node, long min, long max) {
-    if (!node) return true;
-    if (node->val <= min || node->val >= max) return false;
+    if (!node)
+      return true;
+    if (node->val <= min || node->val >= max)
+      return false;
     return isValidBoundBST(node->left, min, node->val) &&
            isValidBoundBST(node->right, node->val, max);
   }
 
   bool isValidBST(TreeNode *root) {
-    if (!root) return true;
+    if (!root)
+      return true;
     return isValidBoundBST(root->left, numeric_limits<long>::min(),
                            root->val) &&
            isValidBoundBST(root->right, root->val, numeric_limits<long>::max());

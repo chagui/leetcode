@@ -1,9 +1,9 @@
 #include <algorithm>
 
-using namespace std;  // default on leetcode
+using namespace std; // default on leetcode
 
 class Solution {
- public:
+public:
   int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
     const int areaABCD = (C - A) * (D - B);
     const int areaEFGH = (G - E) * (H - F);

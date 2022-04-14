@@ -1,7 +1,7 @@
-#include <string>  // default on leetcode
+#include <string> // default on leetcode
 #include <unordered_map>
 
-using namespace std;  // default on leetcode
+using namespace std; // default on leetcode
 
 namespace {
 unordered_map<char, int> symbolToValue{
@@ -11,10 +11,11 @@ unordered_map<char, int> symbolToValue{
 }
 
 class Solution {
- public:
+public:
   int romanToInt(string s) {
-    if (s.empty()) return 0;
-    s.push_back('0');  // sentinel
+    if (s.empty())
+      return 0;
+    s.push_back('0'); // sentinel
 
     int number = 0;
     for (size_t index = 0; index < s.size() - 1; ++index) {

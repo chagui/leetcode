@@ -1,29 +1,29 @@
 #include <bitset>
-#include <string>  // default on leetcode
+#include <string> // default on leetcode
 #include <vector>
 
-using namespace std;  // default on leetcode
+using namespace std; // default on leetcode
 
 namespace {
 constexpr const size_t MAX_ROW_SIZE = 30;
 }
 
 class Solution {
- public:
-  int largestOverlap(vector<vector<int>>& img1, vector<vector<int>>& img2) {
+public:
+  int largestOverlap(vector<vector<int>> &img1, vector<vector<int>> &img2) {
     return largestOverlapBitSet(img1, img2);
   }
 
-  int largestOverlapBruteForce(vector<vector<int>>& img1,
-                               vector<vector<int>>& img2) {
+  int largestOverlapBruteForce(vector<vector<int>> &img1,
+                               vector<vector<int>> &img2) {
     if (img1.size() == 1 && img1[0].size() == 1)
       return (img1[0][0] == 1 && img2[0][0] == 1) ? 1 : 0;
     const size_t size = img1.size();
 
     vector<int> permutations_overlap(4);
     const auto count_permutations_overlap =
-        [&permutations_overlap](vector<vector<int>>& img1,
-                                vector<vector<int>>& img2,
+        [&permutations_overlap](vector<vector<int>> &img1,
+                                vector<vector<int>> &img2,
                                 int horizontal_offset, int vertical_offset) {
           permutations_overlap = {0, 0, 0, 0};
           for (int i = 0, io = vertical_offset;
@@ -62,14 +62,16 @@ class Solution {
     return largest_overlap;
   }
 
-  int largestOverlapBitSet(vector<vector<int>>& img1,
-                           vector<vector<int>>& img2) {
+  int largestOverlapBitSet(vector<vector<int>> &img1,
+                           vector<vector<int>> &img2) {
     const size_t size = img1.size();
     vector<bitset<MAX_ROW_SIZE>> image1(MAX_ROW_SIZE), image2(MAX_ROW_SIZE);
     for (int row = 0; row < size; ++row) {
       for (int col = 0; col < size; ++col) {
-        if (img1[row][col]) image1[row].set(col);
-        if (img2[row][col]) image2[row].set(col);
+        if (img1[row][col])
+          image1[row].set(col);
+        if (img2[row][col])
+          image2[row].set(col);
       }
     }
 
@@ -105,7 +107,8 @@ class Solution {
         // smaller)
         const int potential_overlap =
             (size - vertical_offset) * (size - horizontal_offset);
-        if (potential_overlap < largest_overlap) break;
+        if (potential_overlap < largest_overlap)
+          break;
 
         const int current_largest_overlap =
             count_permutations_overlap(vertical_offset, horizontal_offset);

@@ -2,10 +2,12 @@
 #include <string>
 
 class Solution {
- public:
+public:
   std::string addBinary(std::string a, std::string b) {
-    if (a.empty()) return b;
-    if (b.empty()) return a;
+    if (a.empty())
+      return b;
+    if (b.empty())
+      return a;
 
     std::string result;
     result.reserve(std::max(a.length(), b.length()) + 1);

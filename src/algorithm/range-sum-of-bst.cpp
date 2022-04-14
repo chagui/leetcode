@@ -9,9 +9,10 @@ struct TreeNode {
 };
 
 class Solution {
- public:
+public:
   int rangeSumBST(TreeNode *root, int low, int high) {
-    if (root == nullptr) return 0;
+    if (root == nullptr)
+      return 0;
     // shortcuts
     if (root->val == low)
       return root->val + rangeSumBST(root->right, low, high);

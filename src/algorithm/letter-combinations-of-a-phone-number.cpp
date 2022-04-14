@@ -1,9 +1,9 @@
 #include <numeric>
-#include <string>  // default on leetcode
+#include <string> // default on leetcode
 #include <unordered_map>
 #include <vector>
 
-using namespace std;  // default on leetcode
+using namespace std; // default on leetcode
 
 class Solution {
   const unordered_map<char, const string> lookup{
@@ -11,9 +11,10 @@ class Solution {
       {'6', "mno"}, {'7', "pqrs"}, {'8', "tuv"}, {'9', "wxyz"},
   };
 
- public:
+public:
   vector<string> letterCombinations(string digits) {
-    if (digits.empty()) return {};
+    if (digits.empty())
+      return {};
     const auto count_permutations = [this](int accu, const char d) {
       return accu * lookup.at(d).length();
     };
@@ -26,8 +27,8 @@ class Solution {
     return permutations;
   }
 
-  void add_permutations(string prefix, int pos, const string& digits,
-                        vector<string>& permutations) {
+  void add_permutations(string prefix, int pos, const string &digits,
+                        vector<string> &permutations) {
     if (pos == digits.length()) {
       permutations.push_back(prefix);
       return;

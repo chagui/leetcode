@@ -1,10 +1,10 @@
 #include <vector>
 
-using namespace std;  // default on leetcode
+using namespace std; // default on leetcode
 
 class Solution {
- public:
-  vector<int> twoSum(vector<int>& numbers, int target) {
+public:
+  vector<int> twoSum(vector<int> &numbers, int target) {
     int low = 0, high = numbers.size() - 1;
     while (low < high) {
       const int value = numbers[low] + numbers[high];

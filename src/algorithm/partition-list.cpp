@@ -7,11 +7,11 @@ struct ListNode {
 };
 
 class Solution {
- public:
+public:
   ListNode *partition(ListNode *head, int x) {
-    ListNode new_head;  // sentinel
+    ListNode new_head; // sentinel
     ListNode *left_partition = &new_head;
-    ListNode middle;  // sentinel
+    ListNode middle; // sentinel
     ListNode *right_partition = &middle;
 
     for (; head != nullptr; head = head->next) {
