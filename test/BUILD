@@ -8,4 +8,5 @@ cc_test(
         "@gtest//:gtest_main",
         "//src:algorithm",
     ],
+    args = ["--gtest_shuffle"],
 )
