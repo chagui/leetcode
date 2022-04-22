@@ -1,30 +1,23 @@
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
+#include "src/algorithm/partition-list.h"
+#include "src/helpers/list-node.h"
 
-class Solution {
-  public:
-    ListNode *partition(ListNode *head, int x) {
-        ListNode new_head; // sentinel
-        ListNode *left_partition = &new_head;
-        ListNode middle; // sentinel
-        ListNode *right_partition = &middle;
+leetcode::ListNode *leetcode::Solution::partition(ListNode *head, int x) {
+    ListNode left_sentinel;
+    ListNode *left_tail = &left_sentinel;
+    ListNode right_sentinel;
+    ListNode *right_tail = &right_sentinel;
 
-        for (; head != nullptr; head = head->next) {
-            if (head->val < x) {
-                left_partition->next = new ListNode(head->val, &middle);
-                left_partition = left_partition->next;
-            } else {
-                right_partition->next = new ListNode(head->val);
-                right_partition = right_partition->next;
-            }
+    for (; head != nullptr; head = head->next) {
+        if (head->val < x) {
+            left_tail->next = new ListNode(head->val);
+            left_tail = left_tail->next;
+        } else {
+            right_tail->next = new ListNode(head->val);
+            right_tail = right_tail->next;
         }
-
-        left_partition->next = middle.next;
-        return new_head.next;
     }
-};
+
+    left_tail->next = right_sentinel.next;
+    right_tail->next = nullptr;
+    return left_sentinel.next;
+}
