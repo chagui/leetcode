@@ -9,9 +9,11 @@ cc_library(
     name = "algorithm",
     srcs = glob(["algorithm/*.cpp"]),
     hdrs = glob(["algorithm/*.h"]),
+    copts = ["-Iexternal/gtest/include"],
     visibility = ["//test:__pkg__"],
     deps = [
         "//src:helpers",
+        "@gtest//:gtest",
     ],
 )
 
