@@ -1,6 +1,6 @@
 class Foo {
-  public:
-    Foo() : m{}, cv1{}, cv2{}, firstPrinted{false}, secondPrinted{false} {}
+   public:
+    Foo() : m {}, cv1 {}, cv2 {}, firstPrinted {false}, secondPrinted {false} {}
 
     void first(function<void()> printFirst) {
         // printFirst() outputs "first". Do not change or remove this line.
@@ -25,7 +25,7 @@ class Foo {
         printThird();
     }
 
-  private:
+   private:
     std::mutex m;
     std::condition_variable cv1;
     std::condition_variable cv2;

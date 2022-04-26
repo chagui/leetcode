@@ -1,4 +1,5 @@
 #include "src/algorithm/partition-list.h"
+
 #include "src/helpers/list-node.h"
 
 leetcode::ListNode *leetcode::Solution::partition(ListNode *head, int x) {

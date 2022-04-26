@@ -5,9 +5,9 @@ namespace leetcode {
     struct ListNode;
 
     class Solution {
-      public:
+       public:
         ListNode *rotateRight(ListNode *head, int k);
     };
-} // namespace leetcode
+}  // namespace leetcode
 
-#endif // LEETCODE_ALGORITHM_ROTATE_LIST_H_
+#endif  // LEETCODE_ALGORITHM_ROTATE_LIST_H_

@@ -9,14 +9,12 @@ namespace {
 
         for (int index = 0; index < s.length();) {
             // go down vertically
-            for (int row = 0; index < s.length() && row < numRows;
-                 ++row, ++index) {
+            for (int row = 0; index < s.length() && row < numRows; ++row, ++index) {
                 parts[row] += s[index];
             }
 
             // go up in diagonal
-            for (int row = numRows - 2; index < s.length() && row > 0;
-                 --row, ++index) {
+            for (int row = numRows - 2; index < s.length() && row > 0; --row, ++index) {
                 parts[row] += s[index];
             }
         }
@@ -54,7 +52,7 @@ namespace {
 
         return zigzag;
     }
-} // namespace
+}  // namespace
 
 std::string leetcode::Solution::convert(std::string s, int numRows) {
     if (numRows == 1 || s.length() < numRows) {

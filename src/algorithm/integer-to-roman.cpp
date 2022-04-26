@@ -14,9 +14,9 @@ namespace {
     const char ROMAN_THOUSAND = 'M';
 
     using range_elements = std::tuple<const char, const char, const char>;
-    const std::map<int, range_elements> rangeToElements{
-        {1, {ROMAN_ONE, ROMAN_FIVE, ROMAN_TEN}},
-        {10, {ROMAN_TEN, ROMAN_FIFTY, ROMAN_HUNDRED}},
+    const std::map<int, range_elements> rangeToElements {
+        {  1,                  {ROMAN_ONE, ROMAN_FIVE, ROMAN_TEN}},
+        { 10,             {ROMAN_TEN, ROMAN_FIFTY, ROMAN_HUNDRED}},
         {100, {ROMAN_HUNDRED, ROMAN_FIVE_HUNDRED, ROMAN_THOUSAND}},
     };
 
@@ -43,7 +43,7 @@ namespace {
         }
         return roman;
     }
-} // namespace
+}  // namespace
 
 std::string leetcode::Solution::intToRoman(int num) {
     if (num < 4) {

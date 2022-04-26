@@ -1,12 +1,10 @@
-#include "gtest/gtest.h"
-
 #include "src/algorithm/partition-list.h"
-
-#include "src/helpers/list-node.h"
-#include <algorithm>
 
 #include <algorithm>
 #include <vector>
+
+#include "gtest/gtest.h"
+#include "src/helpers/list-node.h"
 
 using namespace leetcode;
 

@@ -6,9 +6,9 @@
 
 namespace leetcode {
     class Solution {
-      public:
+       public:
         std::vector<int> spiralOrder(std::vector<std::vector<int>> &);
     };
-} // namespace leetcode
+}  // namespace leetcode
 
-#endif // LEETCODE_ALGORITHM_SPIRAL_MATRIX_H_
+#endif  // LEETCODE_ALGORITHM_SPIRAL_MATRIX_H_

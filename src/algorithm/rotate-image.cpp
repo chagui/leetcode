@@ -8,7 +8,9 @@ using namespace std;
 
 class Solution {
    public:
-    void rotate(vector<vector<int>> &matrix) { rotateWithMath(matrix); }
+    void rotate(vector<vector<int>> &matrix) {
+        rotateWithMath(matrix);
+    }
 
     void rotateWithMath(vector<vector<int>> &matrix) {
         for (vector<int> &row : matrix) {

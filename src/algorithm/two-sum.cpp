@@ -5,7 +5,7 @@
 using namespace std;
 
 class Solution {
-  public:
+   public:
     vector<int> twoSum(vector<int> &nums, int target) {
         // return twoSumBruteForce(nums, target);
         // return twoSumHashMapTwoPasses(nums, target);
@@ -15,8 +15,7 @@ class Solution {
     vector<int> twoSumBruteForce(vector<int> &nums, int target) {
         for (int valueIndex = 0; valueIndex < nums.size() - 1; ++valueIndex) {
             const int complement = target - nums[valueIndex];
-            for (int complementIndex = valueIndex + 1;
-                 complementIndex < nums.size(); ++complementIndex) {
+            for (int complementIndex = valueIndex + 1; complementIndex < nums.size(); ++complementIndex) {
                 if (nums[complementIndex] == complement) {
                     return {valueIndex, complementIndex};
                 }
@@ -28,7 +27,9 @@ class Solution {
     vector<int> twoSumHashMapTwoPasses(vector<int> &nums, int target) {
         // build value to indexes (the input may contains multiple times the
         // same value) look-up
-        unordered_map<int, int> valueToIndex{{nums[0], 0}};
+        unordered_map<int, int> valueToIndex {
+            {nums[0], 0}
+        };
         for (int index = 0; index < nums.size(); ++index) {
             valueToIndex.insert_or_assign(nums[index], index);
         }
@@ -44,14 +45,15 @@ class Solution {
     }
 
     vector<int> twoSumHashMapOnePass(vector<int> &nums, int target) {
-        unordered_map<int, int> valueToIndex{{nums[0], 0}};
+        unordered_map<int, int> valueToIndex {
+            {nums[0], 0}
+        };
 
         for (int index = 1; index < nums.size(); ++index) {
             const int value = nums[index];
             const int complement = target - value;
             const auto complementIt = valueToIndex.find(complement);
-            if (complementIt != valueToIndex.end() &&
-                complementIt->second != index) {
+            if (complementIt != valueToIndex.end() && complementIt->second != index) {
                 return {complementIt->second, index};
             }
             valueToIndex[value] = index;

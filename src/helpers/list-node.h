@@ -15,6 +15,6 @@ namespace leetcode {
     ListNode *buildList(const std::vector<int> &);
     bool compareList(ListNode *, ListNode *);
     void printList(ListNode *head, char sep = ' ', char eol = '\n');
-} // namespace leetcode
+}  // namespace leetcode
 
-#endif // LEETCODE_HELPERS_LIST_NODE_H_
+#endif  // LEETCODE_HELPERS_LIST_NODE_H_

@@ -1,10 +1,10 @@
-#include "gtest/gtest.h"
-
 #include "src/algorithm/rotate-list.h"
-#include "src/helpers/list-node.h"
 
 #include <algorithm>
 #include <vector>
+
+#include "gtest/gtest.h"
+#include "src/helpers/list-node.h"
 
 using namespace leetcode;
 

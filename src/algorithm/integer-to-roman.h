@@ -7,9 +7,9 @@ namespace leetcode {
     using namespace std;
 
     class Solution {
-      public:
+       public:
         string intToRoman(int);
     };
-} // namespace leetcode
+}  // namespace leetcode
 
-#endif // LEETCODE_ALGORITHM_INTEGER_TO_ROMAN_H_
+#endif  // LEETCODE_ALGORITHM_INTEGER_TO_ROMAN_H_

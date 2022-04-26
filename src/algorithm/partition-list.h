@@ -5,9 +5,9 @@ namespace leetcode {
     struct ListNode;
 
     class Solution {
-      public:
+       public:
         ListNode *partition(ListNode *head, int x);
     };
-} // namespace leetcode
+}  // namespace leetcode
 
-#endif // LEETCODE_ALGORITHM_PARTITION_LIST_H_
+#endif  // LEETCODE_ALGORITHM_PARTITION_LIST_H_

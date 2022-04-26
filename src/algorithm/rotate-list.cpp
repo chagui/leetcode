@@ -1,13 +1,13 @@
+#include "rotate-list.h"
+
 #include <iostream>
 #include <vector>
 
-#include "rotate-list.h"
 #include "src/helpers/list-node.h"
 
 using namespace std;
 
-leetcode::ListNode *
-leetcode::Solution::rotateRight(leetcode::ListNode *input_head, int k) {
+leetcode::ListNode *leetcode::Solution::rotateRight(leetcode::ListNode *input_head, int k) {
     if (k == 0 || input_head == nullptr || input_head->next == nullptr) {
         return input_head;
     }
@@ -23,8 +23,7 @@ leetcode::Solution::rotateRight(leetcode::ListNode *input_head, int k) {
         element = element->next;
     }
 
-    const int new_head_index =
-        k % length; // use the computed length to cut cycles short
+    const int new_head_index = k % length;  // use the computed length to cut cycles short
     if (k == 0) {
         return head;
     }

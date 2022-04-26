@@ -7,9 +7,9 @@ namespace leetcode {
     using namespace std;
 
     class Solution {
-      public:
+       public:
         vector<int> pivotArray(vector<int> &, int);
     };
-} // namespace leetcode
+}  // namespace leetcode
 
-#endif // LEETCODE_ALGORITHM_PARTITION_ARRAY_ACCORDING_TO_GIVEN_PIVOT_H_
+#endif  // LEETCODE_ALGORITHM_PARTITION_ARRAY_ACCORDING_TO_GIVEN_PIVOT_H_

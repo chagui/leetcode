@@ -7,9 +7,9 @@ namespace leetcode {
     using namespace std;
 
     class Solution {
-      public:
+       public:
         string convert(string s, int numRows);
     };
-} // namespace leetcode
+}  // namespace leetcode
 
-#endif // LEETCODE_ALGORITHM_ZIGZAG_CONVERSION_H_
+#endif  // LEETCODE_ALGORITHM_ZIGZAG_CONVERSION_H_

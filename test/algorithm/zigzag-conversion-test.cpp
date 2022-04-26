@@ -1,6 +1,6 @@
-#include "gtest/gtest.h"
-
 #include "src/algorithm/zigzag-conversion.h"
+
+#include "gtest/gtest.h"
 
 using namespace leetcode;
 

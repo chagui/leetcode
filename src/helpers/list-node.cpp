@@ -11,14 +11,12 @@ leetcode::ListNode *leetcode::buildList(const std::vector<int> &values) {
 }
 
 bool leetcode::compareList(leetcode::ListNode *l1, leetcode::ListNode *l2) {
-    for (; l1 != nullptr && l2 != nullptr && l1->val == l2->val;
-         l1 = l1->next, l2 = l2->next) {
+    for (; l1 != nullptr && l2 != nullptr && l1->val == l2->val; l1 = l1->next, l2 = l2->next) {
     }
     return l1 == nullptr && l2 == nullptr;
 }
 
-void leetcode::printList(leetcode::ListNode *head, char sep /* = ' '*/,
-                         char eol /* = '\0'*/) {
+void leetcode::printList(leetcode::ListNode *head, char sep /* = ' '*/, char eol /* = '\0'*/) {
     for (; head != nullptr; head = head->next) {
         std::cout << head->val << sep;
     }

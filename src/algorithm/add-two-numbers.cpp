@@ -7,12 +7,10 @@ struct ListNode {
 };
 
 class Solution {
-  public:
+   public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
-        if (l1 == nullptr)
-            return l2;
-        if (l2 == nullptr)
-            return l1;
+        if (l1 == nullptr) return l2;
+        if (l2 == nullptr) return l1;
 
         ListNode sentinel;
         ListNode *digit = &sentinel;
