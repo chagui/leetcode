@@ -1,6 +1,8 @@
 #include <string>  // default on leetcode
 #include <unordered_map>
 
+#include "gtest/gtest.h"
+
 using namespace std;  // default on leetcode
 
 class Solution {
@@ -21,3 +23,21 @@ class Solution {
         return max(longest, idx - start);
     }
 };
+
+TEST(LongestSubStringWithoutRepeatingCharacters, Empty) {
+    string s = "";
+    const int longestSubStringLength = Solution().lengthOfLongestSubstring(s);
+    EXPECT_EQ(longestSubStringLength, 0);
+}
+
+TEST(LongestSubStringWithoutRepeatingCharacters, NoRepeatingCharacters) {
+    string s = "abcde";
+    const int longestSubStringLength = Solution().lengthOfLongestSubstring(s);
+    EXPECT_EQ(longestSubStringLength, 5);
+}
+
+TEST(LongestSubStringWithoutRepeatingCharacters, OneRepeatingCharacter) {
+    string s = "abacde";
+    const int longestSubStringLength = Solution().lengthOfLongestSubstring(s);
+    EXPECT_EQ(longestSubStringLength, 5);
+}
